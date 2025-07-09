@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: seditiousthoughts-comments  # Zmień na swoją nazwę
+    env: docker
+    plan: free  # Free tier
+    envVars:
+      - key: SITE_ID
+        value: seditiousthoughts
+      - key: SECRET
+        generateValue: true
+      - key: AUTH_ANON
+        value: "true"
