@@ -24,8 +24,8 @@ services:
         SKIP_FRONTEND_BUILD: "true"
     startCommand: >
       /srv/remark42 server
-      --url https://seditiousthoughts-comments.onrender.com
-      --site seditiousthoughts
+      --url=https://seditiousthoughts-comments.onrender.com
+      --site=seditiousthoughts
       --store.bolt.path=/srv/var/db
-      --secret ${SECRET}
+      --secret=${SECRET}
       --auth.anonymous.enabled=true
