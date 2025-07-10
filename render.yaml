@@ -16,11 +16,16 @@ services:
         value: "true"
       - key: UMASK
         value: "0022"
-      - key: URL
-        value: https://seditiousthoughts-comments.onrender.com
     build:
       dockerfilePath: Dockerfile
       args:
         SKIP_BACKEND_TEST: "true"
         SKIP_FRONTEND_TEST: "true"
         SKIP_FRONTEND_BUILD: "true"
+    startCommand: >
+      /srv/remark42 server
+      --url https://seditiousthoughts-comments.onrender.com
+      --site seditiousthoughts
+      --store.bolt.path=/srv/var/db
+      --secret ${SECRET}
+      --auth.anonymous.enabled=true
