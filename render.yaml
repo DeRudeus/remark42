@@ -16,11 +16,11 @@ services:
         value: "true"
       - key: UMASK
         value: "0022"
-      - key: SKIP_BACKEND_TEST
-        value: "true"
-      - key: SKIP_FRONTEND_TEST
-        value: "true"
-      - key: SKIP_FRONTEND_BUILD
-        value: "true"
       - key: URL
         value: https://seditiousthoughts-comments.onrender.com
+    build:
+      dockerfilePath: Dockerfile
+      args:
+        SKIP_BACKEND_TEST: "true"
+        SKIP_FRONTEND_TEST: "true"
+        SKIP_FRONTEND_BUILD: "true"
