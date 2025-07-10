@@ -14,3 +14,5 @@ services:
         generateValue: true
       - key: AUTH_ANON
         value: "true"
+      - key: UMASK
+        value: "0022"
