@@ -1,8 +1,12 @@
 services:
   - type: web
-    name: seditiousthoughts-comments  # Zmień na swoją nazwę
+    name: seditiousthoughts-comments
     env: docker
-    plan: free  # Free tier
+    plan: free
+    disk:
+      name: remark_data
+      mountPath: /srv/var
+      sizeGB: 1
     envVars:
       - key: SITE_ID
         value: seditiousthoughts
