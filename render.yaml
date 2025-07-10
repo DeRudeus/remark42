@@ -8,13 +8,17 @@ services:
       mountPath: /srv/var
       sizeGB: 1
     envVars:
-      - key: SKIP_BACKEND_TEST
-        value: "true"
       - key: SITE_ID
         value: seditiousthoughts
-      - key: SECRET
-        generateValue: true
       - key: AUTH_ANON
         value: "true"
       - key: UMASK
         value: "0022"
+      - key: SECRET
+        generateValue: true
+      - key: SKIP_BACKEND_TEST
+        value: "true"
+      - key: SKIP_FRONTEND_TEST
+        value: "true"
+      - key: SKIP_FRONTEND_BUILD
+        value: "true"
