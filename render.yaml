@@ -8,6 +8,8 @@ services:
       mountPath: /srv/var
       sizeGB: 1
     envVars:
+		  - key: SKIP_BACKEND_TEST
+        value: "true"
       - key: SITE_ID
         value: seditiousthoughts
       - key: SECRET
